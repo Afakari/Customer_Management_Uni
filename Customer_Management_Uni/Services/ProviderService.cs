@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace Customer_Management_Uni.Services
 {
@@ -32,34 +28,18 @@ namespace Customer_Management_Uni.Services
             _database.ExecuteNonQuery(query, parameters);
         }
 
-        public Provider GetById(int id)
-        {
-            string query = "SELECT * FROM Providers WHERE Id = @Id;";
-            var parameters = new Dictionary<string, object> { { "@Id", id } };
-            var results = _database.ExecuteQuery(query, parameters);
-
-            if (results.Count > 0)
-                return MapToProvider(results[0]);
-
-            return null;
-        }
-
-        public List<Provider> GetAll()
+        public DataTable GetAll()
         {
             string query = "SELECT * FROM Providers;";
             var results = _database.ExecuteQuery(query);
 
-            var providers = new List<Provider>();
-            foreach (var row in results)
-            {
-                providers.Add(MapToProvider(row));
-            }
-            return providers;
+ 
+            return results;
         }
 
         public void Update(int id, Provider provider)
         {
-            string query = "UPDATE Providers SET Name = @Name, ServiceType = @ServiceType, ContactInfo = @ContactInfo WHERE Id = @Id;";
+            string query = "UPDATE Providers SET Name = @Name, ServiceType = @ServiceType, Number = @Number , EmailAddress = @EmailAddress WHERE Id = @Id;";
             var parameters = new Dictionary<string, object>
         {
             { "@Name", provider.Name },
@@ -78,7 +58,7 @@ namespace Customer_Management_Uni.Services
             _database.ExecuteNonQuery(query, parameters);
         }
 
-        private Provider MapToProvider(Dictionary<string, object> row)
+        private Provider MapToProvider(DataRow row)
         {
             return new Provider
             {

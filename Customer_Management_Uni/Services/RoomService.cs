@@ -1,9 +1,6 @@
 ﻿
-using System;
+using System.Data;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Customer_Management_Uni.Services
 {
@@ -29,29 +26,12 @@ namespace Customer_Management_Uni.Services
             _database.ExecuteNonQuery(query, parameters);
         }
 
-        public Room GetById(int id)
-        {
-            string query = "SELECT * FROM Rooms WHERE Id = @Id;";
-            var parameters = new Dictionary<string, object> { { "@Id", id } };
-            var results = _database.ExecuteQuery(query, parameters);
-
-            if (results.Count > 0)
-                return MapToRoom(results[0]);
-
-            return null;
-        }
-
-        public List<Room> GetAll()
+        public DataTable GetAll()
         {
             string query = "SELECT * FROM Rooms;";
             var results = _database.ExecuteQuery(query);
 
-            var rooms = new List<Room>();
-            foreach (var row in results)
-            {
-                rooms.Add(MapToRoom(row));
-            }
-            return rooms;
+            return results;
         }
 
         public void Update(int id, Room room)
@@ -73,7 +53,7 @@ namespace Customer_Management_Uni.Services
             _database.ExecuteNonQuery(query, parameters);
         }
 
-        private Room MapToRoom(Dictionary<string, object> row)
+        private Room MapToRoom(DataRow row)
         {
             return new Room
             {

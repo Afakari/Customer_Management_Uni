@@ -28,12 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.UpdateData = new System.Windows.Forms.Button();
+            this.InsertData = new System.Windows.Forms.Button();
+            this.DeleteData = new System.Windows.Forms.Button();
+            this.RefershForm = new System.Windows.Forms.Button();
+            this.DataView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DataView)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // UpdateData
+            // 
+            this.UpdateData.Location = new System.Drawing.Point(14, 174);
+            this.UpdateData.Name = "UpdateData";
+            this.UpdateData.Size = new System.Drawing.Size(75, 23);
+            this.UpdateData.TabIndex = 9;
+            this.UpdateData.Text = "Update";
+            this.UpdateData.UseVisualStyleBackColor = true;
+            // 
+            // InsertData
+            // 
+            this.InsertData.Location = new System.Drawing.Point(14, 225);
+            this.InsertData.Name = "InsertData";
+            this.InsertData.Size = new System.Drawing.Size(75, 23);
+            this.InsertData.TabIndex = 8;
+            this.InsertData.Text = "Insert";
+            this.InsertData.UseVisualStyleBackColor = true;
+            // 
+            // DeleteData
+            // 
+            this.DeleteData.Location = new System.Drawing.Point(14, 120);
+            this.DeleteData.Name = "DeleteData";
+            this.DeleteData.Size = new System.Drawing.Size(75, 23);
+            this.DeleteData.TabIndex = 7;
+            this.DeleteData.Text = "Delete";
+            this.DeleteData.UseVisualStyleBackColor = true;
+            // 
+            // RefershForm
+            // 
+            this.RefershForm.Location = new System.Drawing.Point(14, 70);
+            this.RefershForm.Name = "RefershForm";
+            this.RefershForm.Size = new System.Drawing.Size(75, 23);
+            this.RefershForm.TabIndex = 6;
+            this.RefershForm.Text = "Refersh";
+            this.RefershForm.UseVisualStyleBackColor = true;
+            // 
+            // DataView
+            // 
+            this.DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataView.Location = new System.Drawing.Point(105, 12);
+            this.DataView.Name = "DataView";
+            this.DataView.Size = new System.Drawing.Size(342, 483);
+            this.DataView.TabIndex = 5;
+            // 
+            // RoomForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "RoomForm";
+            this.ClientSize = new System.Drawing.Size(621, 551);
+            this.Controls.Add(this.UpdateData);
+            this.Controls.Add(this.InsertData);
+            this.Controls.Add(this.DeleteData);
+            this.Controls.Add(this.RefershForm);
+            this.Controls.Add(this.DataView);
+            this.Name = "RoomForm";
+            this.Text = "Room";
+            ((System.ComponentModel.ISupportInitialize)(this.DataView)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button UpdateData;
+        private System.Windows.Forms.Button InsertData;
+        private System.Windows.Forms.Button DeleteData;
+        private System.Windows.Forms.Button RefershForm;
+        private System.Windows.Forms.DataGridView DataView;
     }
 }

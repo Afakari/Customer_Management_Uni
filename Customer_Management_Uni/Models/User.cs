@@ -9,7 +9,5 @@ namespace Customer_Management_Uni.Models
         [EmailAddress]
         public string EmailAddress { get; set; }
         public int Number { get; set; }
-        [MinLength(8)]
-        public string Password { get; set; }
     }
 }

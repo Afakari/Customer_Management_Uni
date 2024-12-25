@@ -1,6 +1,7 @@
 ﻿using Customer_Management_Uni.Models;
 using Customer_Management_Uni.Utils;
 using System.Collections.Generic;
+using System.Data;
 
 
 namespace Customer_Management_Uni.Services
@@ -16,51 +17,33 @@ namespace Customer_Management_Uni.Services
 
         public void Add(User user)
         {
-            string query = "INSERT INTO Users (Name, Number , Email, Password) VALUES (@Name,@Number ,  @Email, @Password);";
+            string query = "INSERT INTO Users (Name, Number , Email) VALUES (@Name,@Number ,  @Email);";
             var parameters = new Dictionary<string, object>
         {
             { "@Name", user.Name },
             { "@Email", user.EmailAddress },
             { "@Number", user.Number },
-            { "@Password", user.Password }
         };
             _database.ExecuteNonQuery(query, parameters);
         }
 
-        public User GetById(int id)
-        {
-            string query = "SELECT * FROM Users WHERE Id = @Id;";
-            var parameters = new Dictionary<string, object> { { "@Id", id } };
-            var results = _database.ExecuteQuery(query, parameters);
 
-            if (results.Count > 0)
-                return MapToUser(results[0]);
-
-            return null;
-        }
-
-        public List<User> GetAll()
+        public DataTable GetAll()
         {
             string query = "SELECT * FROM Users;";
             var results = _database.ExecuteQuery(query);
 
-            var users = new List<User>();
-            foreach (var row in results)
-            {
-                users.Add(MapToUser(row));
-            }
-            return users;
+            return results;
         }
 
         public void Update(int id, User user)
         {
-            string query = "UPDATE Users SET Name = @Name, Email = @Email, Password = @Password WHERE Id = @Id;";
+            string query = "UPDATE Users SET Name = @Name, Email = @Email WHERE Id = @Id;";
             var parameters = new Dictionary<string, object>
         {
             { "@Name", user.Name },
             { "@Email", user.EmailAddress },
             { "@Number", user.Number },
-            { "@Password", user.Password },
             { "@Id", id }
         };
             _database.ExecuteNonQuery(query, parameters);
@@ -73,15 +56,14 @@ namespace Customer_Management_Uni.Services
             _database.ExecuteNonQuery(query, parameters);
         }
 
-        private User MapToUser(Dictionary<string, object> row)
+        private User MapToUser(DataRow row)
         {
             return new User
             {
                 Id = (int)row["Id"],
                 Name = row["Name"].ToString(),
                 Number = (int)row["Number"],
-                EmailAddress = row["Email"].ToString(),
-                Password = row["Password"].ToString()
+                EmailAddress = row["Email"].ToString() 
             };
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Customer_Management_Uni.Models;
 using Customer_Management_Uni.Utils;
+using System.Data;
 
 namespace Customer_Management_Uni.Services
 {
@@ -33,38 +34,31 @@ namespace Customer_Management_Uni.Services
             _dbManager.ExecuteNonQuery(query, parameters);
         }
 
-        public List<Booking> GetAllBookings()
+        public DataTable GetAllBookings()
         {
             string query = "SELECT * FROM bookings";
 
             var results = _dbManager.ExecuteQuery(query);
-            var bookings = new List<Booking>();
 
-            foreach (var row in results)
-            {
-                bookings.Add(MapToBooking(row));
-            }
-
-            return bookings;
+            return results;
         }
 
 
-        public Booking GetBookingById(int bookingId)
+        public DataTable GetBookingById(int bookingId)
         {
-            string query = "SELECT * FROM bookings WHERE booking_id = @BookingID";
+            string query = "SELECT * FROM bookings WHERE booking_id = @BookingID  limit 1;";
 
             var parameters = new Dictionary<string, object>
-            {
-                { "@BookingID", bookingId }
-            };
+    {
+        { "@BookingID", bookingId }
+    };
 
-            var result = _dbManager.ExecuteQuery(query, parameters);
+            var results = _dbManager.ExecuteQuery(query, parameters);
 
-            if (result.Count == 0) return null;
-            return MapToBooking(result.First());
+            return results;
         }
 
-        public List<Booking> GetBookingsByDate(DateTime? startDate = null, DateTime? endDate = null)
+        public DataTable GetBookingsByDate(DateTime? startDate = null, DateTime? endDate = null)
         {
             if (!startDate.HasValue)
                 startDate = DateTime.MinValue;
@@ -72,8 +66,15 @@ namespace Customer_Management_Uni.Services
                 endDate = DateTime.MaxValue;
 
             string query = @"
-                        SELECT * 
-                        FROM bookings 
+                    select start_time as ""Start Time"",
+                    end_time as ""End Time"",
+                    r.location  || '-'||  r.name as ""Room"" ,
+                    p.name as ""Provider"",
+                    u.name  as ""Customer""
+                    From Bookings b
+                    inner join users u on b.user_id  = u.id
+                    inner join Rooms r on r.id = b.room_id 
+                    inner join Providers p on p.id = b.provider_id 
                         WHERE (start_time >= @StartDate AND start_time <= @EndDate)
                            OR (end_time >= @StartDate AND end_time <= @EndDate)";
 
@@ -85,13 +86,7 @@ namespace Customer_Management_Uni.Services
 
             var result = _dbManager.ExecuteQuery(query, parameters);
 
-            var bookings = new List<Booking>();
-            foreach (var row in result)
-            {
-                bookings.Add(MapToBooking(row));
-            }
-
-            return bookings;
+            return result;
         }
 
         public Booking GetBookingByUserName(string userName)
@@ -106,7 +101,8 @@ namespace Customer_Management_Uni.Services
             bookings.end_time 
         FROM bookings 
         INNER JOIN users ON bookings.user_id = users.id
-        WHERE users.name = @UserName";
+        WHERE users.name = @UserName
+        limit 1;";
 
         var parameters = new Dictionary<string, object>
         {
@@ -115,8 +111,13 @@ namespace Customer_Management_Uni.Services
 
             var result = _dbManager.ExecuteQuery(query, parameters);
 
-            if (result.Count == 0) return null; // No booking found
-            return MapToBooking(result.First());
+
+            foreach (DataRow row in result.Rows)
+            {
+                return MapToBooking(row);
+            }
+
+            return null;
         }
 
         public void UpdateBooking(Booking booking)
@@ -155,26 +156,32 @@ namespace Customer_Management_Uni.Services
         public bool HasConflict(Booking newBooking)
         {
             string query = @"SELECT * FROM bookings 
-                             WHERE (room_id = @RoomID or provider_id = @ProviderID ) AND 
-                                   ((@NewStartTime BETWEEN start_time AND end_time) OR 
-                                    (@NewEndTime BETWEEN start_time AND end_time) OR 
-                                    (start_time BETWEEN @NewStartTime AND @NewEndTime) OR 
-                                    (end_time BETWEEN @NewStartTime AND @NewEndTime))";
+                     WHERE (room_id = @RoomID OR provider_id = @ProviderID) AND 
+                           ((@NewStartTime BETWEEN start_time AND end_time) OR 
+                            (@NewEndTime BETWEEN start_time AND end_time) OR 
+                            (start_time BETWEEN @NewStartTime AND @NewEndTime) OR 
+                            (end_time BETWEEN @NewStartTime AND @NewEndTime))
+                      limit 1;";
 
             var parameters = new Dictionary<string, object>
-            {
-                { "@RoomID", newBooking.room_id },
-                { "@ProviderID", newBooking.provider_id },
-                { "@NewStartTime", newBooking.start_time },
-                { "@NewEndTime", newBooking.end_time }
-            };
+                {
+                    { "@RoomID", newBooking.room_id },
+                    { "@ProviderID", newBooking.provider_id },
+                    { "@NewStartTime", newBooking.start_time },
+                    { "@NewEndTime", newBooking.end_time }
+                };
 
             var result = _dbManager.ExecuteQuery(query, parameters);
-            return result.Count > 0; 
+
+            foreach (var _ in result.Rows)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-
-        private Booking MapToBooking(Dictionary<string, object> row)
+        private Booking MapToBooking(DataRow row)
         {
             return new Booking
             {
