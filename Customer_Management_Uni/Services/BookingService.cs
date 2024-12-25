@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Customer_Management_Uni.Models;
 using Customer_Management_Uni.Utils;
-using Customer_Management_Uni.Services;
-using System.Data;
 
 namespace Customer_Management_Uni.Services
 {
