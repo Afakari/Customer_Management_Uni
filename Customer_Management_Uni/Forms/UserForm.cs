@@ -70,13 +70,15 @@ namespace Customer_Management_Uni.Forms
         {
             using (UserDataUpsert form = new UserDataUpsert())
             {
-                User ToInsertData = new User();
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    ToInsertData.Id = 0;
-                    ToInsertData.Name = form.ProviderName;
-                    ToInsertData.Number = form.Number;
-                    ToInsertData.EmailAddress = form.EmailAddress;
+                    User ToInsertData = new User
+                    {
+                        Id = 0,
+                        Name = form.ProviderName,
+                        Number = form.Number,
+                        EmailAddress = form.EmailAddress
+                    };
 
                     UserHelper.Add(ToInsertData);
                 }
@@ -89,31 +91,52 @@ namespace Customer_Management_Uni.Forms
             if (DataView.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = DataView.SelectedRows[0];
-                int id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
 
-                string name = selectedRow.Cells["Name"].Value.ToString();
-                int number = Convert.ToInt32(selectedRow.Cells["Number"].Value);
-                string email = selectedRow.Cells["EmailAddress"].Value.ToString();
-
-                using (UserDataUpsert form = new UserDataUpsert())
+                try
                 {
-                    form.PopulateFields(name, number, email);
-                    User ToUpdateData = new User();
-                    if (form.ShowDialog() == DialogResult.OK)
-                    {
-                        ToUpdateData.Id = id;
-                        ToUpdateData.Name = form.ProviderName;
-                        ToUpdateData.Number = form.Number;
-                        ToUpdateData.EmailAddress = form.EmailAddress;
+                    int id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
+                    string name = selectedRow.Cells["Name"].Value?.ToString();
+                    int number = Convert.ToInt32(selectedRow.Cells["Number"].Value);
+                    string email = selectedRow.Cells["EmailAddress"].Value?.ToString();
 
-                        // Update data in the database (add your database logic here)
-                        UserHelper.Update(id, ToUpdateData);
+                    if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email))
+                    {
+                        MessageBox.Show("Invalid data in the selected row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
+
+                    using (UserDataUpsert form = new UserDataUpsert())
+                    {
+                        form.PopulateFields(name, number, email);
+
+                        if (form.ShowDialog() == DialogResult.OK)
+                        {
+                            User updatedUser = new User
+                            {
+                                Id = id,
+                                Name = form.ProviderName,
+                                Number = form.Number,
+                                EmailAddress = form.EmailAddress
+                            };
+
+                            // Update data in the database
+                            UserHelper.Update(id, updatedUser);
+
+                            MessageBox.Show("Data updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Refresh the DataGridView (if needed)
+                            LoadActive();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error updating data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("No row selected for update.");
+                MessageBox.Show("No row selected for update.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

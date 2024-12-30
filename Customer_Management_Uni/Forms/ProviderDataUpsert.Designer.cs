@@ -112,6 +112,7 @@
             this.SaveButton.TabIndex = 12;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // CancelButton
             // 
@@ -121,8 +122,9 @@
             this.CancelButton.TabIndex = 13;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // RoomDataUpsert
+            // ProviderDataUpsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,7 +139,7 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.ServiceTypeData);
             this.Controls.Add(this.ServiceTypeLabel);
-            this.Name = "RoomDataUpsert";
+            this.Name = "ProviderDataUpsert";
             this.Text = "ProviderDataUpsert";
             this.ResumeLayout(false);
             this.PerformLayout();

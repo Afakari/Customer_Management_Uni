@@ -7,7 +7,8 @@ namespace Customer_Management_Uni.Utils
     public class DatabaseManager
     {
         private SQLiteConnection connection;
-        private static string connectionString = @"Data Source=C:\Users\Keynoosh\source\repos\Customer_Management_Uni\Customer_Management_Uni\database.db;Version=3;Pooling=True;Max Pool Size=100;";
+
+        private static string connectionString = @"Data Source=C:\Users\aa940\source\Customer_Management_Uni\Customer_Management_Uni\database.db;Version=3;Pooling=True;Max Pool Size=100;";
 
         public DatabaseManager()
         {

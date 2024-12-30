@@ -16,9 +16,10 @@ namespace Customer_Management_Uni.Forms
         {
             InitializeComponent();
             databaseManager = new DatabaseManager();
-            RoomService RoomHelper = new RoomService(databaseManager);
+            RoomHelper = new RoomService(databaseManager);
         }
-        private void ProviderForm_Load(object sender, EventArgs e)
+
+        private void RoomForm_Load(object sender, EventArgs e)
         {
             LoadActive();
         }
@@ -34,31 +35,34 @@ namespace Customer_Management_Uni.Forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading bookings: {ex.Message}");
+                MessageBox.Show($"Error loading rooms: {ex.Message}");
             }
 
 
         }
 
-
         private void DeleteData_Click(object sender, EventArgs e)
         {
             if (DataView.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow row in DataView.SelectedRows)
+                DialogResult result = MessageBox.Show("Are you sure you want to delete the selected rows?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
                 {
-                    int id = Convert.ToInt32(row.Cells["Id"].Value);
+ 
+                    foreach (DataGridViewRow row in DataView.SelectedRows)
+                    {
+                        int id = Convert.ToInt32(row.Cells["Id"].Value);
+                        RoomHelper.Delete(id);
+                    }
+                    MessageBox.Show("Selected rows deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    RoomHelper.Delete(id);
+                    LoadActive();
                 }
-
-                MessageBox.Show("Selected rows deleted successfully!");
-
-                LoadActive();
             }
             else
             {
-                MessageBox.Show("No rows selected.");
+
+                MessageBox.Show("No rows selected.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -71,14 +75,16 @@ namespace Customer_Management_Uni.Forms
         {
             using (RoomDataUpsert form = new RoomDataUpsert())
             {
-                Room ToInsertData = new Room();
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    ToInsertData.Id = 0;
-                    ToInsertData.Name = form.Name;
-                    ToInsertData.Location = form.Location;
+                    Room newRoom = new Room
+                    {
+                        Id = 0, 
+                        Name = form.Name,
+                        Location = form.Location
+                    };
 
-                    RoomHelper.Add(ToInsertData);
+                    RoomHelper.Add(newRoom);
                 }
             }
         }
@@ -90,28 +96,41 @@ namespace Customer_Management_Uni.Forms
             {
                 DataGridViewRow selectedRow = DataView.SelectedRows[0];
                 int id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
-
-                string name = selectedRow.Cells["Name"].Value.ToString();
-                string location = selectedRow.Cells["Location"].Value.ToString();
+                string name = selectedRow.Cells["Name"].Value?.ToString();
+                string location = selectedRow.Cells["Location"].Value?.ToString();
 
                 using (RoomDataUpsert form = new RoomDataUpsert())
                 {
                     form.PopulateFields(name, location);
-                    Room ToUpdateData = new Room();
+
                     if (form.ShowDialog() == DialogResult.OK)
                     {
-                        ToUpdateData.Id = id;
-                        ToUpdateData.Name = form.Name;
-                        ToUpdateData.Location = form.Location;
-                        RoomHelper.Update(id, ToUpdateData);
+                        Room ToUpdateData = new Room
+                        {
+                            Id = id,
+                            Name = form.Name,
+                            Location = form.Location
+                        };
+
+                        try
+                        {
+                            RoomHelper.Update(id, ToUpdateData);
+                            MessageBox.Show("Data updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadActive();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error updating data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("No row selected for update.");
+                MessageBox.Show("No row selected for update.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
     }
 }

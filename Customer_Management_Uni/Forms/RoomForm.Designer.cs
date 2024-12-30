@@ -44,6 +44,7 @@
             this.UpdateData.TabIndex = 9;
             this.UpdateData.Text = "Update";
             this.UpdateData.UseVisualStyleBackColor = true;
+            this.UpdateData.Click += new System.EventHandler(this.UpdateData_Click);
             // 
             // InsertData
             // 
@@ -53,6 +54,7 @@
             this.InsertData.TabIndex = 8;
             this.InsertData.Text = "Insert";
             this.InsertData.UseVisualStyleBackColor = true;
+            this.InsertData.Click += new System.EventHandler(this.InsertData_Click);
             // 
             // DeleteData
             // 
@@ -62,6 +64,7 @@
             this.DeleteData.TabIndex = 7;
             this.DeleteData.Text = "Delete";
             this.DeleteData.UseVisualStyleBackColor = true;
+            this.DeleteData.Click += new System.EventHandler(this.DeleteData_Click);
             // 
             // RefershForm
             // 
@@ -71,12 +74,15 @@
             this.RefershForm.TabIndex = 6;
             this.RefershForm.Text = "Refersh";
             this.RefershForm.UseVisualStyleBackColor = true;
+            this.RefershForm.Click += new System.EventHandler(this.RefershForm_Click);
             // 
             // DataView
             // 
             this.DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataView.Location = new System.Drawing.Point(105, 12);
             this.DataView.Name = "DataView";
+            this.DataView.ReadOnly = true;
+            this.DataView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataView.Size = new System.Drawing.Size(342, 483);
             this.DataView.TabIndex = 5;
             // 
@@ -92,6 +98,7 @@
             this.Controls.Add(this.DataView);
             this.Name = "RoomForm";
             this.Text = "Room";
+            this.Load += new System.EventHandler(this.RoomForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).EndInit();
             this.ResumeLayout(false);
 

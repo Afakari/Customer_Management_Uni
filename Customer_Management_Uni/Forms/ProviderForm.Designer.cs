@@ -41,6 +41,7 @@
             this.DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataView.Location = new System.Drawing.Point(103, 12);
             this.DataView.Name = "DataView";
+            this.DataView.ReadOnly = true;
             this.DataView.Size = new System.Drawing.Size(342, 483);
             this.DataView.TabIndex = 0;
             // 

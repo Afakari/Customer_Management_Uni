@@ -18,12 +18,11 @@ namespace Customer_Management_Uni.Services
 
         public void AddBooking(Booking booking)
         {
-            string query = @"INSERT INTO bookings (booking_id, user_id, provider_id, room_id, start_time, end_time) 
-                             VALUES (@BookingID, @UserID, @ProviderID, @RoomID, @StartTime, @EndTime)";
+            string query = @"INSERT INTO bookings (user_id, provider_id, room_id, start_time, end_time) 
+                             VALUES (@UserID, @ProviderID, @RoomID, @StartTime, @EndTime)";
 
             var parameters = new Dictionary<string, object>
             {
-                { "@BookingID", booking.booking_id },
                 { "@UserID", booking.user_id },
                 { "@ProviderID", booking.provider_id },
                 { "@RoomID", booking.room_id },
