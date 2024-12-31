@@ -1,0 +1,21 @@
+site_name: OOP notes
+nav:
+  - Home: README.md
+  - oop1: oop1.md
+  - oop2: oop2.md
+  - oop3: oop3.md
+  - oop4: oop4.md
+  - oop5: oop5.md
+  - oop6: oop6.md
+  - oop7: oop7.md
+  - oop8: oop8.md
+theme:
+  name: readthedocs
+  language: fa
+  features:
+    - content.tabs
+    - content.code.annotate
+    - content.tooltips
+    - navigation.top
+    - navigation.expand
+    - navigation.full
