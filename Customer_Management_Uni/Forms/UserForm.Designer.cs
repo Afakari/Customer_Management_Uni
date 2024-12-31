@@ -54,7 +54,7 @@
             this.InsertData.TabIndex = 8;
             this.InsertData.Text = "Insert";
             this.InsertData.UseVisualStyleBackColor = true;
-            this.InsertData.Click += new System.EventHandler(this.UpdateData_Click);
+            this.InsertData.Click += new System.EventHandler(this.InsertData_Click);
             // 
             // DeleteData
             // 
@@ -82,6 +82,7 @@
             this.DataView.Location = new System.Drawing.Point(110, 12);
             this.DataView.Name = "DataView";
             this.DataView.ReadOnly = true;
+            this.DataView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataView.Size = new System.Drawing.Size(342, 483);
             this.DataView.TabIndex = 5;
             // 
@@ -89,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 530);
+            this.ClientSize = new System.Drawing.Size(526, 530);
             this.Controls.Add(this.UpdateData);
             this.Controls.Add(this.InsertData);
             this.Controls.Add(this.DeleteData);

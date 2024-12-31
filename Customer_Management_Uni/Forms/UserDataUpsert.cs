@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Customer_Management_Uni.Forms
@@ -6,7 +7,7 @@ namespace Customer_Management_Uni.Forms
     public partial class UserDataUpsert : Form
     {
         public string ProviderName => NameData.Text;
-        public int Number => int.TryParse(NumberData.Text, out int result) ? result : 0;
+        public string Number => NumberData.Text;
         public string EmailAddress => EmailAddressData.Text;
 
         public UserDataUpsert()
@@ -14,7 +15,7 @@ namespace Customer_Management_Uni.Forms
             InitializeComponent();
         }
 
-        public void PopulateFields(string name, int number, string emailAddress)
+        public void PopulateFields(string name, string number, string emailAddress)
         {
             NameData.Text = name;
             NumberData.Text = number.ToString();
@@ -35,7 +36,7 @@ namespace Customer_Management_Uni.Forms
                 return;
             }
 
-            if (Number <= 0)
+            if (Number.Any(char.IsLetter))
             {
                 MessageBox.Show("Please enter a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

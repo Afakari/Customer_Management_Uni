@@ -63,7 +63,6 @@
             this.ActiveReservationsText.Size = new System.Drawing.Size(105, 13);
             this.ActiveReservationsText.TabIndex = 1;
             this.ActiveReservationsText.Text = "Active Reservations:";
-            this.ActiveReservationsText.Click += new System.EventHandler(this.label1_Click);
             // 
             // toolStrip1
             // 
@@ -71,7 +70,7 @@
             this.SettingDropDown});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1241, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(767, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -152,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 726);
+            this.ClientSize = new System.Drawing.Size(767, 528);
             this.Controls.Add(this.UpdateReservation);
             this.Controls.Add(this.DeleteReservation);
             this.Controls.Add(this.RefreshButton);

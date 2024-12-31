@@ -81,6 +81,7 @@ namespace Customer_Management_Uni.Forms
                     };
 
                     UserHelper.Add(ToInsertData);
+                    LoadActive();
                 }
             }
         }
@@ -96,8 +97,8 @@ namespace Customer_Management_Uni.Forms
                 {
                     int id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
                     string name = selectedRow.Cells["Name"].Value?.ToString();
-                    int number = Convert.ToInt32(selectedRow.Cells["Number"].Value);
-                    string email = selectedRow.Cells["EmailAddress"].Value?.ToString();
+                    string number = selectedRow.Cells["Number"].Value.ToString();
+                    string email = selectedRow.Cells["email_address"].Value?.ToString();
 
                     if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email))
                     {

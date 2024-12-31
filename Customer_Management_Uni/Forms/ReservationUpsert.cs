@@ -31,6 +31,12 @@ namespace Customer_Management_Uni.Forms
             LoadUsers();
             LoadProviders();
             LoadRooms();
+            StartTimePicker.Format = DateTimePickerFormat.Custom;
+            EndTimePicker.Format = DateTimePickerFormat.Custom;
+            StartTimePicker.CustomFormat = "yyyy/MM/dd hh:mm tt";
+            EndTimePicker.CustomFormat = "yyyy/MM/dd hh:mm tt";
+            StartTimePicker.Value = DateTime.Now;
+            EndTimePicker.Value = DateTime.Now.AddDays(7);
         }
 
         private void LoadUsers()

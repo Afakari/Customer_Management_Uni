@@ -42,6 +42,7 @@
             this.DataView.Location = new System.Drawing.Point(103, 12);
             this.DataView.Name = "DataView";
             this.DataView.ReadOnly = true;
+            this.DataView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataView.Size = new System.Drawing.Size(342, 483);
             this.DataView.TabIndex = 0;
             // 
@@ -89,14 +90,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 535);
+            this.ClientSize = new System.Drawing.Size(683, 535);
             this.Controls.Add(this.UpdateData);
             this.Controls.Add(this.InsertData);
             this.Controls.Add(this.DeleteData);
             this.Controls.Add(this.RefershForm);
             this.Controls.Add(this.DataView);
             this.Name = "ProviderForm";
-            this.Text = "ProviderForm";
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.ProviderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).EndInit();
             this.ResumeLayout(false);

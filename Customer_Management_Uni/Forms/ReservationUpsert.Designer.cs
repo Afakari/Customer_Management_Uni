@@ -59,7 +59,7 @@
             // RoomComboBox
             // 
             this.RoomComboBox.FormattingEnabled = true;
-            this.RoomComboBox.Location = new System.Drawing.Point(320, 51);
+            this.RoomComboBox.Location = new System.Drawing.Point(330, 48);
             this.RoomComboBox.Name = "RoomComboBox";
             this.RoomComboBox.Size = new System.Drawing.Size(121, 21);
             this.RoomComboBox.TabIndex = 2;
@@ -93,7 +93,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(146, 154);
+            this.SaveButton.Location = new System.Drawing.Point(149, 152);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(227, 154);
+            this.CancelButton.Location = new System.Drawing.Point(274, 152);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 23);
             this.CancelButton.TabIndex = 7;
@@ -113,16 +113,18 @@
             // 
             // StartTimePicker
             // 
-            this.StartTimePicker.Location = new System.Drawing.Point(24, 96);
+            this.StartTimePicker.Location = new System.Drawing.Point(41, 96);
             this.StartTimePicker.Name = "StartTimePicker";
+            this.StartTimePicker.ShowUpDown = true;
             this.StartTimePicker.Size = new System.Drawing.Size(200, 20);
             this.StartTimePicker.TabIndex = 8;
             // 
             // EndTimePicker
             // 
-            this.EndTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.EndTimePicker.Location = new System.Drawing.Point(264, 96);
+            this.EndTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.EndTimePicker.Location = new System.Drawing.Point(274, 96);
             this.EndTimePicker.Name = "EndTimePicker";
+            this.EndTimePicker.ShowUpDown = true;
             this.EndTimePicker.Size = new System.Drawing.Size(177, 20);
             this.EndTimePicker.TabIndex = 9;
             // 
@@ -130,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(522, 236);
             this.Controls.Add(this.EndTimePicker);
             this.Controls.Add(this.StartTimePicker);
             this.Controls.Add(this.CancelButton);

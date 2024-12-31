@@ -43,7 +43,7 @@ namespace Customer_Management_Uni.Services
         }
 
 
-        public DataTable GetBookingById(int bookingId)
+        public Booking GetBookingById(int bookingId)
         {
             string query = "SELECT * FROM bookings WHERE booking_id = @BookingID  limit 1;";
 
@@ -54,7 +54,12 @@ namespace Customer_Management_Uni.Services
 
             var results = _dbManager.ExecuteQuery(query, parameters);
 
-            return results;
+            foreach (DataRow row in results.Rows)
+            {
+                return MapToBooking(row);
+            }
+
+            return null;
         }
 
         public DataTable GetBookingsByDate(DateTime? startDate = null, DateTime? endDate = null)
@@ -65,7 +70,7 @@ namespace Customer_Management_Uni.Services
                 endDate = DateTime.MaxValue;
 
             string query = @"
-                    select start_time as ""Start Time"",
+                    select booking_id as id, start_time as ""Start Time"",
                     end_time as ""End Time"",
                     r.location  || '-'||  r.name as ""Room"" ,
                     p.name as ""Provider"",

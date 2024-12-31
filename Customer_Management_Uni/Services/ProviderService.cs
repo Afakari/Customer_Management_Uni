@@ -17,7 +17,7 @@ namespace Customer_Management_Uni.Services
 
         public void Add(Provider provider)
         {
-            string query = "INSERT INTO Providers (Name, ServiceType, EmailAddress,Number) VALUES (@Name, @ServiceType,@EmailAddress ,@Number);";
+            string query = "INSERT INTO Providers (Name, service_type, email_address,Number) VALUES (@Name, @ServiceType,@EmailAddress ,@Number);";
             var parameters = new Dictionary<string, object>
         {
             { "@Name", provider.Name },
@@ -39,7 +39,7 @@ namespace Customer_Management_Uni.Services
 
         public void Update(int id, Provider provider)
         {
-            string query = "UPDATE Providers SET Name = @Name, ServiceType = @ServiceType, Number = @Number , EmailAddress = @EmailAddress WHERE Id = @Id;";
+            string query = "UPDATE Providers SET Name = @Name, service_type = @ServiceType, Number = @Number , email_address = @EmailAddress WHERE Id = @Id;";
             var parameters = new Dictionary<string, object>
         {
             { "@Name", provider.Name },
@@ -65,7 +65,7 @@ namespace Customer_Management_Uni.Services
                 Id = (int)row["Id"],
                 Name = row["Name"].ToString(),
                 ServiceType = row["ServiceType"].ToString(),
-                Number = (int)row["Number"],
+                Number = row["Number"].ToString(),
                 @EmailAddress = row["EmailAddress"].ToString()
             };
         }

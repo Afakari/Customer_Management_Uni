@@ -85,6 +85,8 @@ namespace Customer_Management_Uni.Forms
                     };
 
                     RoomHelper.Add(newRoom);
+                    LoadActive();
+
                 }
             }
         }

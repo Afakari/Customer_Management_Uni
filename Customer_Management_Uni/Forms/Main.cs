@@ -18,6 +18,7 @@ namespace Customer_Management_Uni.Forms
             InitializeComponent();
             databaseManager = new DatabaseManager();
             BookingHelper = new BookingService(databaseManager);
+            
         }
 
 
@@ -42,8 +43,15 @@ namespace Customer_Management_Uni.Forms
                         end_time = form.EndTime
                     };
 
-                    BookingHelper.AddBooking(reservation);
-                    LoadActiveReserves();
+                    if (BookingHelper.HasConflict(reservation))
+                    {
+                        MessageBox.Show("Conflict detected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        BookingHelper.AddBooking(reservation);
+                        LoadActiveReserves();
+                    }
                 }
             }
         }
@@ -54,19 +62,20 @@ namespace Customer_Management_Uni.Forms
             if (ActiveReservesView.SelectedRows.Count > 0)
             {
                 var selectedRow = ActiveReservesView.SelectedRows[0];
-                int id = Convert.ToInt32(selectedRow.Cells["booking_id"].Value);
+                int id = Convert.ToInt32(selectedRow.Cells["id"].Value);
 
                 var userService = new UserService(databaseManager);
                 var providerService = new ProviderService(databaseManager);
                 var roomService = new RoomService(databaseManager);
-
+                
+                Booking booking = BookingHelper.GetBookingById(id);
                 using (var form = new ReservationUpsert(userService, providerService, roomService))
                 {
-                    form.UserId = Convert.ToInt32(selectedRow.Cells["user_id"].Value);
-                    form.ProviderId = Convert.ToInt32(selectedRow.Cells["provider_id"].Value);
-                    form.RoomId = Convert.ToInt32(selectedRow.Cells["room_id"].Value);
-                    form.StartTime = Convert.ToDateTime(selectedRow.Cells["start_time"].Value);
-                    form.EndTime = Convert.ToDateTime(selectedRow.Cells["end_time"].Value);
+                    form.UserId = booking.user_id;
+                    form.ProviderId = booking.provider_id;
+                    form.RoomId = booking.room_id;
+                    form.StartTime = booking.start_time;
+                    form.EndTime = booking.end_time;
 
                     if (form.ShowDialog() == DialogResult.OK)
                     {
@@ -79,8 +88,15 @@ namespace Customer_Management_Uni.Forms
                             end_time = form.EndTime
                         };
 
-                        BookingHelper.UpdateBooking(reservation);
-                        LoadActiveReserves();
+                        if (BookingHelper.HasConflict(reservation))
+                        {
+                            MessageBox.Show("Conflict detected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            BookingHelper.UpdateBooking(reservation);
+                            LoadActiveReserves();
+                        }
                     }
                 }
             }
