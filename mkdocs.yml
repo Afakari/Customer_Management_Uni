@@ -10,6 +10,20 @@ nav:
   - oop7: oop7.md
   - oop8: oop8.md
 theme:
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+  font:
+    text: Vazir
+    code: Fira Code
   name: readthedocs
   language: fa
   features:
