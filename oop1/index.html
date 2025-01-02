@@ -1,0 +1,1310 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../oop2/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>oop1 - OOP notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazir:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazir";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="OOP notes" class="md-header__button md-logo" aria-label="OOP notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OOP notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              oop1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OOP notes" class="md-nav__button md-logo" aria-label="OOP notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OOP notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    oop1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    oop1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      مقدمه
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      مزایا و معایب شی‌گرایی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      مفاهیم پایه شی‌گرایی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ویژگی‌های اساسی شی‌گرایی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      فازهای تولید نرم‌افزار
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      تعریف نیازمندی و انواع آن
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      تکنیک‌های استخراج نیازمندی‌ها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      تحلیل شی‌گرا
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      طراحی شی‌گرا
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      آزمون شی‌گرا
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      استقرار
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="تمرین">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      سوالات و پاسخ‌ها به فارسی
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="سوالات و پاسخ‌ها به فارسی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. تفاوت‌های اصلی بین برنامه‌نویسی ساخت‌یافته و برنامه‌نویسی شی‌گرا چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. مفهوم وراثت در برنامه‌نویسی شی‌گرا را با یک مثال توضیح دهید.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. مراحل کلیدی چرخه حیات توسعه نرم‌افزار (SDLC) چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. چندریختی چگونه انعطاف‌پذیری سیستم‌های شی‌گرا را افزایش می‌دهد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. هدف کپسوله‌سازی چیست و چگونه امنیت را بهبود می‌بخشد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶. فرآیند تحلیل شی‌گرا و مراحل کلیدی آن را توضیح دهید.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۷. تفاوت‌های بین نیازمندی‌های عملکردی و غیرعملکردی چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۸. چه تکنیک‌هایی برای جمع‌آوری نیازمندی‌های نرم‌افزاری استفاده می‌شود و کدام یک موثرتر است؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۹. نقش آزمون در توسعه نرم‌افزار شی‌گرا چیست و انواع آزمون‌ها کدامند؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۰. چالش‌های اصلی در استقرار یک سیستم نرم‌افزاری جدید در سازمان چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۱. انتزاع چگونه به ساده‌سازی سیستم‌های پیچیده کمک می‌کند؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۲. اهمیت موارد کاربرد (Use Cases) در تحلیل شی‌گرا چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۳. همروندی چگونه در سیستم‌های شی‌گرا پیاده‌سازی می‌شود؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۴. اجزای کلیدی یک کلاس در برنامه‌نویسی شی‌گرا چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ishikawa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۵. نمودار استخوان ماهی (Ishikawa) چیست و چگونه در تحلیل مشکل استفاده می‌شود؟
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      مقدمه
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      مزایا و معایب شی‌گرایی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      مفاهیم پایه شی‌گرایی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ویژگی‌های اساسی شی‌گرایی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      فازهای تولید نرم‌افزار
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      تعریف نیازمندی و انواع آن
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      تکنیک‌های استخراج نیازمندی‌ها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      تحلیل شی‌گرا
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      طراحی شی‌گرا
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      آزمون شی‌گرا
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      استقرار
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="تمرین">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      سوالات و پاسخ‌ها به فارسی
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="سوالات و پاسخ‌ها به فارسی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. تفاوت‌های اصلی بین برنامه‌نویسی ساخت‌یافته و برنامه‌نویسی شی‌گرا چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. مفهوم وراثت در برنامه‌نویسی شی‌گرا را با یک مثال توضیح دهید.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. مراحل کلیدی چرخه حیات توسعه نرم‌افزار (SDLC) چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. چندریختی چگونه انعطاف‌پذیری سیستم‌های شی‌گرا را افزایش می‌دهد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. هدف کپسوله‌سازی چیست و چگونه امنیت را بهبود می‌بخشد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶. فرآیند تحلیل شی‌گرا و مراحل کلیدی آن را توضیح دهید.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۷. تفاوت‌های بین نیازمندی‌های عملکردی و غیرعملکردی چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۸. چه تکنیک‌هایی برای جمع‌آوری نیازمندی‌های نرم‌افزاری استفاده می‌شود و کدام یک موثرتر است؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۹. نقش آزمون در توسعه نرم‌افزار شی‌گرا چیست و انواع آزمون‌ها کدامند؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۰. چالش‌های اصلی در استقرار یک سیستم نرم‌افزاری جدید در سازمان چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۱. انتزاع چگونه به ساده‌سازی سیستم‌های پیچیده کمک می‌کند؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۲. اهمیت موارد کاربرد (Use Cases) در تحلیل شی‌گرا چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۳. همروندی چگونه در سیستم‌های شی‌گرا پیاده‌سازی می‌شود؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۴. اجزای کلیدی یک کلاس در برنامه‌نویسی شی‌گرا چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ishikawa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۵. نمودار استخوان ماهی (Ishikawa) چیست و چگونه در تحلیل مشکل استفاده می‌شود؟
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">نیاز سنجی و تحلیل سیستم</h1>
+<h2 id="_2">مقدمه</h2>
+<ul>
+<li><strong>مهندسی نرم‌افزار</strong>:  </li>
+<li>مهندس نرم‌افزار لزوماً برنامه‌نویس نیست، بلکه با تجزیه و تحلیل و استفاده از ابزارها و تکنیک‌ها، بهترین راه‌حل را برای پروژه انتخاب و پیاده‌سازی می‌کند.  </li>
+<li>مهندسی نرم‌افزار شامل طراحی، پیاده‌سازی، ویرایش و بهبود کیفیت نرم‌افزار است.  </li>
+<li><strong>انواع برنامه‌نویسی</strong>:  </li>
+<li><strong>برنامه‌نویسی ساخت‌یافته</strong>: رویکرد خطی و مرحله‌ای، شامل تجزیه سیستم به زیرسیستم‌ها و تحلیل آنها.  </li>
+<li><strong>برنامه‌نویسی شی‌گرا</strong>: ساختار نرم‌افزار مبتنی بر اشیاء و ارتباطات بین آنها از طریق تبادل پیام.  </li>
+</ul>
+<h2 id="_3">مزایا و معایب شی‌گرایی</h2>
+<ul>
+<li><strong>مزایا</strong>:  </li>
+<li>استفاده مجدد (Reusability)  </li>
+<li>امنیت (Security)  </li>
+<li>انعطاف‌پذیری (Flexibility)  </li>
+<li>مقیاس‌پذیری (Scalability)  </li>
+<li><strong>معایب</strong>:  </li>
+<li>روند یادگیری سخت  </li>
+<li>زمان کامپایل طولانی‌تر  </li>
+<li>پیچیدگی بالا  </li>
+</ul>
+<h2 id="_4">مفاهیم پایه شی‌گرایی</h2>
+<ul>
+<li><strong>چرخه حیات نرم‌افزار (SDLC)</strong>:  </li>
+<li>شامل مراحل نیازسنجی، تحلیل، طراحی، پیاده‌سازی، آزمون، پشتیبانی و تجدید طراحی نرم‌افزار.  </li>
+<li><strong>سیستم (System)</strong>:  </li>
+<li>مجموعه‌ای از اجزای بهم وابسته که یک هدف خاص را دنبال می‌کنند.  </li>
+<li><strong>شی (Object)</strong>:  </li>
+<li>هر چیزی در دنیای واقعی که در سیستم اطلاعاتی از آن نگهداری می‌شود. شامل صفات (Attributes) و متدها (Methods).  </li>
+<li><strong>کلاس (Class)</strong>:  </li>
+<li>توصیف یک یا چند موجودیت.  </li>
+<li><strong>صفت (Attribute)</strong>:  </li>
+<li>خصوصیات شی.  </li>
+<li><strong>متد (Method)</strong>:  </li>
+<li>عملیاتی که توسط کلاس انجام می‌شود.  </li>
+<li><strong>سلسله مراتب کلاس‌ها</strong>:  </li>
+<li>شامل سوپرکلاس (Superclass)، زیرکلاس (Subclass) و روابط بین آنها.  </li>
+</ul>
+<h2 id="_5">ویژگی‌های اساسی شی‌گرایی</h2>
+<ul>
+<li><strong>انتزاع (Abstraction)</strong>:  </li>
+<li>نادیده گرفتن جنبه‌های غیرضروری مسئله.  </li>
+<li><strong>وراثت (Inheritance)</strong>:  </li>
+<li>استفاده از خصوصیات مشترک کلاس‌ها برای جلوگیری از تکرار کد.  </li>
+<li><strong>چندریختی (Polymorphism)</strong>:  </li>
+<li>توانایی یک شی برای نشان دادن رفتارهای مختلف در شرایط متفاوت.  </li>
+<li><strong>قابلیت استفاده مجدد (Reusability)</strong>:  </li>
+<li>استفاده مجدد از کد در پروژه‌های مختلف.  </li>
+<li><strong>کپسوله‌سازی (Encapsulation)</strong>:  </li>
+<li>پنهان‌سازی جزئیات و اطلاعات شی از دید دیگران.  </li>
+<li><strong>همروندی (Concurrency)</strong>:  </li>
+<li>اجرای موازی دو یا چند فعالیت در سطح یک شی یا سیستم.  </li>
+<li><strong>ارتباط پیامی (Message Communication)</strong>:  </li>
+<li>تنها راه ارتباط بین اشیاء، مانند ارسال یک مقدار یا پارامتر از یک شی به شی دیگر.  </li>
+</ul>
+<h2 id="_6">فازهای تولید نرم‌افزار</h2>
+<ol>
+<li><strong>تعریف</strong>:  </li>
+<li><strong>امکان‌سنجی (Feasibility Study)</strong>: بررسی اقتصادی، قانونی و زمان‌بندی پروژه.  </li>
+<li><strong>تحلیل (Analysis)</strong>: شناخت جنبه‌های مختلف سیستم و جمع‌آوری اطلاعات.  </li>
+<li><strong>طراحی (Designing)</strong>: طراحی منطقی و فیزیکی سیستم.  </li>
+<li><strong>توسعه</strong>:  </li>
+<li><strong>کدنویسی (Coding)</strong>: ترجمه طراحی به کد.  </li>
+<li><strong>آزمون (Testing)</strong>: ارزیابی کارایی برنامه.  </li>
+<li><strong>استقرار (Deployment)</strong>:  </li>
+<li>جایگزینی سیستم قدیم با سیستم جدید.  </li>
+<li><strong>نگهداری</strong>:  </li>
+<li><strong>آموزش (Learning)</strong>: آموزش سیستم جدید به کاربران.  </li>
+<li><strong>پشتیبانی (Supporting)</strong>: بروزرسانی و اشکال‌زدایی.  </li>
+</ol>
+<h2 id="_7">تعریف نیازمندی و انواع آن</h2>
+<ul>
+<li><strong>نیازمندی (Requirement)</strong>:  </li>
+<li>شرایط یا قابلیت‌های مورد نیاز کاربر برای حل مسئله یا رسیدن به یک هدف.  </li>
+<li><strong>انواع نیازمندی</strong>:  </li>
+<li><strong>عملکردی (Functional)</strong>: کارکردهای سیستم مانند جستجو، ثبت نام و غیره.  </li>
+<li><strong>غیرعملکردی (Non-functional)</strong>: کیفیت، قابلیت اطمینان، سرعت و زمان پاسخ.  </li>
+<li><strong>مستندسازی نیازمندی‌ها</strong>:  </li>
+<li>استفاده از زبان استاندارد مدل‌سازی مانند UML.  </li>
+</ul>
+<h2 id="_8">تکنیک‌های استخراج نیازمندی‌ها</h2>
+<ul>
+<li><strong>مشاهده</strong>:  </li>
+<li>مستقیم (تحلیلگر شخصاً مشاهده می‌کند).  </li>
+<li>غیرمستقیم (ضبط ویدئو یا صوت بدون اطلاع کاربر).  </li>
+<li><strong>پرسشنامه</strong>:  </li>
+<li>ثبت عقاید گروهی از افراد به شکل یکنواخت.  </li>
+<li><strong>مصاحبه</strong>:  </li>
+<li>آزاد (بدون محدودیت در سوالات).  </li>
+<li>منظم (طبق روال مشخص).  </li>
+<li><strong>استفاده از کتابخانه و اسناد</strong>:  </li>
+<li>جمع‌آوری اطلاعات از کتب، مقالات، و بایگانی‌ها.  </li>
+</ul>
+<h2 id="_9">تحلیل شی‌گرا</h2>
+<ul>
+<li><strong>گام‌های تحلیل شی‌گرا</strong>:  </li>
+<li>استخراج نیازهای مشتری.  </li>
+<li>شناسایی موارد کاربرد (Use Cases).  </li>
+<li>انتخاب کلاس‌ها و اشیاء.  </li>
+<li>شناسایی صفات و اعمال هر شی.  </li>
+<li>تعریف ساختار و سلسله مراتب کلاس‌ها.  </li>
+<li>ساخت مدل شی-رابطه و شی-رفتار.  </li>
+<li>بازنگری مدل تحلیل برای مطابقت با موارد کاربرد.  </li>
+</ul>
+<h2 id="_10">طراحی شی‌گرا</h2>
+<ul>
+<li><strong>رویکرد طراحی شی‌گرا</strong>:  </li>
+<li>تبدیل مدل تحلیل به مدل طراحی.  </li>
+<li>طراحی معماری نرم‌افزار و تعریف زیرسیستم‌ها.  </li>
+<li>توسعه واسط کاربر.  </li>
+<li>طراحی الگوریتم‌ها و ساختمان داده‌ها.  </li>
+<li><strong>توصیف شی</strong>:  </li>
+<li>توصیف درونی (Internal)، بیرونی (External) و پیاده‌سازی (Implementation).  </li>
+</ul>
+<h2 id="_11">آزمون شی‌گرا</h2>
+<ul>
+<li><strong>استراتژی‌های آزمون</strong>:  </li>
+<li><strong>آزمون واحد (Unit Test)</strong>: بررسی کد و پیمانه‌ها.  </li>
+<li><strong>آزمون یکپارچگی (Integration Test)</strong>: بررسی ارتباط بین پیمانه‌ها.  </li>
+<li><strong>آزمون سیستم (System Test)</strong>: بررسی عملکرد سیستم.  </li>
+<li><strong>آزمون اعتبارسنجی (Validation Test)</strong>: بررسی سازگاری سیستم با محیط کاربر.  </li>
+</ul>
+<h2 id="_12">استقرار</h2>
+<ul>
+<li><strong>استراتژی‌های استقرار</strong>:  </li>
+<li>نصب آزمایشی سیستم جدید در بخشی از سازمان.  </li>
+<li>نصب سیستم جدید و قطع سیستم قدیم.  </li>
+<li>نصب تدریجی سیستم جدید و قطع تدریجی سیستم قدیم.  </li>
+</ul>
+<h2 id="_13">تمرین</h2>
+<ul>
+<li><strong>تعریف سیستم</strong>:  </li>
+<li>عنوان سیستم، شرح کلی، اشیاء داخلی و خارجی، فعالیت‌ها، ارتباطات بین اشیاء و فعالیت‌ها، روند اجرا، قوانین سیستم.  </li>
+</ul>
+<h3 id="_14">سوالات و پاسخ‌ها به فارسی</h3>
+<hr />
+<h4 id="_15">۱. تفاوت‌های اصلی بین برنامه‌نویسی ساخت‌یافته و برنامه‌نویسی شی‌گرا چیست؟</h4>
+<ul>
+<li><strong>برنامه‌نویسی ساخت‌یافته</strong>:  </li>
+<li>رویکرد خطی و مرحله‌ای دارد.  </li>
+<li>سیستم به زیرسیستم‌ها تجزیه می‌شود و هر بخش به‌صورت جداگانه تحلیل و پیاده‌سازی می‌شود.  </li>
+<li>مدیریت خطا و اشکال‌زدایی ساده‌تر است.  </li>
+<li><strong>برنامه‌نویسی شی‌گرا</strong>:  </li>
+<li>مبتنی بر اشیاء و ارتباطات بین آنهاست.  </li>
+<li>از مفاهیمی مانند وراثت، چندریختی و کپسوله‌سازی استفاده می‌کند.  </li>
+<li>قابلیت استفاده مجدد کد و انعطاف‌پذیری بیشتری دارد.  </li>
+</ul>
+<hr />
+<h4 id="_16">۲. مفهوم وراثت در برنامه‌نویسی شی‌گرا را با یک مثال توضیح دهید.</h4>
+<ul>
+<li><strong>وراثت</strong>:  </li>
+<li>امکان استفاده از خصوصیات و متدهای یک کلاس (سوپرکلاس) در کلاس دیگر (زیرکلاس) را فراهم می‌کند.  </li>
+<li>مثال:  <ul>
+<li>کلاس <code>حیوان</code> (سوپرکلاس) دارای خصوصیاتی مانند <code>نام</code> و متدی مانند <code>حرکت()</code> است.  </li>
+<li>کلاس <code>سگ</code> (زیرکلاس) از کلاس <code>حیوان</code> ارث‌بری می‌کند و می‌تواند از متد <code>حرکت()</code> استفاده کند یا آن را تغییر دهد.  </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="sdlc">۳. مراحل کلیدی چرخه حیات توسعه نرم‌افزار (SDLC) چیست؟</h4>
+<ol>
+<li><strong>نیازسنجی</strong>: جمع‌آوری و تحلیل نیازهای کاربر.  </li>
+<li><strong>تحلیل</strong>: شناخت سیستم و طراحی راه‌حل.  </li>
+<li><strong>طراحی</strong>: طراحی منطقی و فیزیکی سیستم.  </li>
+<li><strong>پیاده‌سازی</strong>: کدنویسی و ساخت نرم‌افزار.  </li>
+<li><strong>آزمون</strong>: ارزیابی کارایی و رفع اشکالات.  </li>
+<li><strong>استقرار</strong>: نصب و راه‌اندازی سیستم.  </li>
+<li><strong>نگهداری</strong>: پشتیبانی، بروزرسانی و بهبود سیستم.  </li>
+</ol>
+<hr />
+<h4 id="_17">۴. چندریختی چگونه انعطاف‌پذیری سیستم‌های شی‌گرا را افزایش می‌دهد؟</h4>
+<ul>
+<li><strong>چندریختی</strong>:  </li>
+<li>به اشیاء اجازه می‌دهد رفتارهای مختلفی را در شرایط متفاوت نشان دهند.  </li>
+<li>مثال: متد <code>حرکت()</code> می‌تواند در کلاس <code>ماشین</code> به معنای رانندگی و در کلاس <code>پرنده</code> به معنای پرواز باشد.  </li>
+<li>این ویژگی باعث می‌شود کد انعطاف‌پذیرتر و قابل استفاده در شرایط مختلف باشد.  </li>
+</ul>
+<hr />
+<h4 id="_18">۵. هدف کپسوله‌سازی چیست و چگونه امنیت را بهبود می‌بخشد؟</h4>
+<ul>
+<li><strong>کپسوله‌سازی</strong>:  </li>
+<li>پنهان‌سازی جزئیات و اطلاعات داخلی شی از دید دیگران.  </li>
+<li>دسترسی به داده‌ها فقط از طریق متدهای تعریف‌شده امکان‌پذیر است.  </li>
+<li>این کار امنیت را افزایش می‌دهد، زیرا داده‌ها به‌طور مستقیم قابل تغییر نیستند و فقط از طریق متدهای کنترل‌شده قابل دسترسی هستند.  </li>
+</ul>
+<hr />
+<h4 id="_19">۶. فرآیند تحلیل شی‌گرا و مراحل کلیدی آن را توضیح دهید.</h4>
+<ol>
+<li><strong>استخراج نیازهای مشتری</strong>: جمع‌آوری نیازهای سیستم.  </li>
+<li><strong>شناسایی موارد کاربرد</strong>: تعیین سناریوهای استفاده از سیستم.  </li>
+<li><strong>انتخاب کلاس‌ها و اشیاء</strong>: شناسایی اشیاء و کلاس‌های اصلی.  </li>
+<li><strong>شناسایی صفات و اعمال هر شی</strong>: تعیین خصوصیات و رفتارهای هر شی.  </li>
+<li><strong>تعریف ساختار و سلسله مراتب کلاس‌ها</strong>: سازماندهی کلاس‌ها و روابط بین آنها.  </li>
+<li><strong>ساخت مدل شی-رابطه و شی-رفتار</strong>: نمایش ارتباطات و رفتارهای اشیاء.  </li>
+<li><strong>بازنگری مدل تحلیل</strong>: اطمینان از مطابقت مدل با نیازهای مشتری.  </li>
+</ol>
+<hr />
+<h4 id="_20">۷. تفاوت‌های بین نیازمندی‌های عملکردی و غیرعملکردی چیست؟</h4>
+<ul>
+<li><strong>نیازمندی‌های عملکردی</strong>:  </li>
+<li>کارکردهای سیستم مانند جستجو، ثبت نام و پرداخت.  </li>
+<li><strong>نیازمندی‌های غیرعملکردی</strong>:  </li>
+<li>کیفیت سیستم مانند سرعت، قابلیت اطمینان، و زمان پاسخ.  </li>
+</ul>
+<hr />
+<h4 id="_21">۸. چه تکنیک‌هایی برای جمع‌آوری نیازمندی‌های نرم‌افزاری استفاده می‌شود و کدام یک موثرتر است؟</h4>
+<ul>
+<li><strong>تکنیک‌ها</strong>:  </li>
+<li>مشاهده مستقیم و غیرمستقیم.  </li>
+<li>پرسشنامه.  </li>
+<li>مصاحبه (آزاد و منظم).  </li>
+<li>استفاده از کتابخانه و اسناد.  </li>
+<li><strong>موثرترین تکنیک</strong>:  </li>
+<li>مصاحبه مستقیم، زیرا امکان جمع‌آوری اطلاعات دقیق و عمیق را فراهم می‌کند.  </li>
+</ul>
+<hr />
+<h4 id="_22">۹. نقش آزمون در توسعه نرم‌افزار شی‌گرا چیست و انواع آزمون‌ها کدامند؟</h4>
+<ul>
+<li><strong>نقش آزمون</strong>:  </li>
+<li>شناسایی خطاها و اطمینان از عملکرد صحیح نرم‌افزار.  </li>
+<li><strong>انواع آزمون</strong>:  </li>
+<li>آزمون واحد (Unit Test): بررسی کد و پیمانه‌ها.  </li>
+<li>آزمون یکپارچگی (Integration Test): بررسی ارتباط بین پیمانه‌ها.  </li>
+<li>آزمون سیستم (System Test): بررسی عملکرد کلی سیستم.  </li>
+<li>آزمون اعتبارسنجی (Validation Test): بررسی سازگاری سیستم با محیط کاربر.  </li>
+</ul>
+<hr />
+<h4 id="_23">۱۰. چالش‌های اصلی در استقرار یک سیستم نرم‌افزاری جدید در سازمان چیست؟</h4>
+<ul>
+<li><strong>چالش‌ها</strong>:  </li>
+<li>مقاومت کاربران در برابر تغییر.  </li>
+<li>هماهنگی بین سیستم قدیم و جدید.  </li>
+<li>افزایش هزینه‌ها و زمان‌بندی.  </li>
+<li>نیاز به آموزش کاربران و کارمندان.  </li>
+</ul>
+<hr />
+<h4 id="_24">۱۱. انتزاع چگونه به ساده‌سازی سیستم‌های پیچیده کمک می‌کند؟</h4>
+<ul>
+<li><strong>انتزاع</strong>:  </li>
+<li>نادیده گرفتن جزئیات غیرضروری و تمرکز بر جنبه‌های مهم سیستم.  </li>
+<li>این کار باعث می‌شود سیستم قابل درک‌تر و مدیریت‌پذیرتر شود.  </li>
+</ul>
+<hr />
+<h4 id="use-cases">۱۲. اهمیت موارد کاربرد (Use Cases) در تحلیل شی‌گرا چیست؟</h4>
+<ul>
+<li><strong>موارد کاربرد</strong>:  </li>
+<li>سناریوهای استفاده از سیستم را توصیف می‌کنند.  </li>
+<li>به شناسایی نیازهای سیستم و تعیین رفتارهای اشیاء کمک می‌کنند.  </li>
+</ul>
+<hr />
+<h4 id="_25">۱۳. همروندی چگونه در سیستم‌های شی‌گرا پیاده‌سازی می‌شود؟</h4>
+<ul>
+<li><strong>همروندی</strong>:  </li>
+<li>اجرای موازی دو یا چند فعالیت در سطح یک شی یا سیستم.  </li>
+<li>با استفاده از تکنیک‌هایی مانند نخ‌ها (Threads) و فرآیندها (Processes) پیاده‌سازی می‌شود.  </li>
+</ul>
+<hr />
+<h4 id="_26">۱۴. اجزای کلیدی یک کلاس در برنامه‌نویسی شی‌گرا چیست؟</h4>
+<ul>
+<li><strong>اجزای کلاس</strong>:  </li>
+<li>صفات (Attributes): خصوصیات شی.  </li>
+<li>متدها (Methods): رفتارها و عملیات شی.  </li>
+<li>سازنده (Constructor): برای ایجاد شی.  </li>
+<li>مخرب (Destructor): برای از بین بردن شی.  </li>
+</ul>
+<hr />
+<h4 id="ishikawa">۱۵. نمودار استخوان ماهی (Ishikawa) چیست و چگونه در تحلیل مشکل استفاده می‌شود؟</h4>
+<ul>
+<li><strong>نمودار استخوان ماهی</strong>:  </li>
+<li>ابزاری برای شناسایی علل ریشه‌ای مشکلات.  </li>
+<li>مشکل در سر ماهی و علل احتمالی در استخوان‌ها نمایش داده می‌شوند.  </li>
+<li>به سازمان‌دهی و تحلیل دلایل مشکلات کمک می‌کند.  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs", "content.code.annotate", "content.tooltips", "navigation.top", "navigation.expand", "navigation.full"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>

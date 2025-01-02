@@ -1,0 +1,1148 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../oop5/">
+      
+      
+        <link rel="next" href="../oop7/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>oop6 - OOP notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazir:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazir";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="OOP notes" class="md-header__button md-logo" aria-label="OOP notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OOP notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              oop6
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OOP notes" class="md-nav__button md-logo" aria-label="OOP notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OOP notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    oop6
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    oop6
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      جزوه آموزشی برنامه‌نویسی شیءگرا با C
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۱: آرایه‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۱: آرایه‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۱ آرایه یک بعدی
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۲ دستیابی به عناصر آرایه
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۳ یافتن تعداد عناصر آرایه
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۴ آرایه دو بعدی (ماتریس)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jagged-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۵ آرایه دندانه‌ای (Jagged Array)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۲: حلقه‌ها و پیمایش آرایه‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۲: حلقه‌ها و پیمایش آرایه‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲.۱ حلقه foreach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۳: متدهای کلاس Array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۳: متدهای کلاس Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳.۱ مرتب‌سازی (Sort)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳.۲ معکوس کردن (Reverse)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binarysearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳.۳ جستجوی دودویی (BinarySearch)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۴: ساختمان (Structure)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۴: ساختمان (Structure)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴.۱ تعریف ساختمان
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴.۲ استفاده از ساختمان
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۵: Dictionary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۵: Dictionary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵.۱ تعریف و استفاده
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۶: انتقال اطلاعات بین فرم‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۶: انتقال اطلاعات بین فرم‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶.۱ استفاده از آرگومان‌ها
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین‌ها و مثال‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="تمرین‌ها و مثال‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین ۱:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین ۲:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین ۳:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      جزوه آموزشی برنامه‌نویسی شیءگرا با C
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۱: آرایه‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۱: آرایه‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۱ آرایه یک بعدی
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۲ دستیابی به عناصر آرایه
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۳ یافتن تعداد عناصر آرایه
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۴ آرایه دو بعدی (ماتریس)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jagged-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱.۵ آرایه دندانه‌ای (Jagged Array)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۲: حلقه‌ها و پیمایش آرایه‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۲: حلقه‌ها و پیمایش آرایه‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲.۱ حلقه foreach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۳: متدهای کلاس Array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۳: متدهای کلاس Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳.۱ مرتب‌سازی (Sort)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳.۲ معکوس کردن (Reverse)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binarysearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳.۳ جستجوی دودویی (BinarySearch)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۴: ساختمان (Structure)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۴: ساختمان (Structure)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴.۱ تعریف ساختمان
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴.۲ استفاده از ساختمان
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۵: Dictionary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۵: Dictionary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵.۱ تعریف و استفاده
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      فصل ۶: انتقال اطلاعات بین فرم‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="فصل ۶: انتقال اطلاعات بین فرم‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶.۱ استفاده از آرگومان‌ها
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین‌ها و مثال‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="تمرین‌ها و مثال‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین ۱:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین ۲:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      تمرین ۳:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>oop6</h1>
+
+<h3 id="c">جزوه آموزشی برنامه‌نویسی شیءگرا با C</h3>
+<p><strong>منبع:</strong> Beginning C# Object-Oriented Programming<br />
+<strong>نویسنده:</strong> Dan Clark<br />
+<strong>مدرس:</strong> شکاری</p>
+<h3 id="_1"><strong>فصل ۱: آرایه‌ها</strong></h3>
+<h4 id="_2"><strong>۱.۱ آرایه یک بعدی</strong></h4>
+<p>آرایه‌ها برای ذخیره چند داده هم‌نوع تحت یک نام استفاده می‌شوند.</p>
+<ul>
+<li><strong>تعریف آرایه:</strong></li>
+</ul>
+<pre><code class="language-csharp">int[] x = new int[5]; // آرایه ای با ۵ عنصر از نوع int
+</code></pre>
+<ul>
+<li><strong>اندیس‌دهی:</strong> اندیس آرایه از صفر شروع می‌شود.</li>
+</ul>
+<pre><code class="language-csharp">x[0] = 10; // مقداردهی به اولین عنصر
+</code></pre>
+<ul>
+<li><strong>مقداردهی اولیه:</strong> اگر مقداردهی نشود، مقادیر پیش‌فرض اعمال می‌شوند:</li>
+<li><code>int</code>: ۰</li>
+<li><code>bool</code>: false</li>
+<li><code>string</code>: null</li>
+</ul>
+<pre><code class="language-csharp">string[] names = new string[] {&quot;Ali&quot;, &quot;Reza&quot;, &quot;Hossein&quot;};
+</code></pre>
+<h4 id="_3"><strong>۱.۲ دستیابی به عناصر آرایه</strong></h4>
+<p>برای دسترسی به عناصر آرایه از اندیس استفاده می‌شود:</p>
+<pre><code class="language-csharp">int[] numbers = {10, 20, 30};
+int secondNumber = numbers[1]; // 20
+</code></pre>
+<h4 id="_4"><strong>۱.۳ یافتن تعداد عناصر آرایه</strong></h4>
+<p>با استفاده از خاصیت <code>Length</code>:</p>
+<pre><code class="language-csharp">int count = numbers.Length; // 3
+</code></pre>
+<h4 id="_5"><strong>۱.۴ آرایه دو بعدی (ماتریس)</strong></h4>
+<p>آرایه‌ای با دو اندیس (سطر و ستون).</p>
+<ul>
+<li><strong>تعریف:</strong></li>
+</ul>
+<pre><code class="language-csharp">int[,] matrix = new int[3, 3]; // ماتریس ۳x۳
+</code></pre>
+<ul>
+<li><strong>مقداردهی:</strong></li>
+</ul>
+<pre><code class="language-csharp">int[,] matrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+</code></pre>
+<ul>
+<li><strong>دستیابی به عناصر:</strong></li>
+</ul>
+<pre><code class="language-csharp">int element = matrix[1, 2]; // 6
+</code></pre>
+<h4 id="jagged-array"><strong>۱.۵ آرایه دندانه‌ای (Jagged Array)</strong></h4>
+<p>آرایه‌ای که هر عنصر آن خود یک آرایه است.</p>
+<ul>
+<li><strong>تعریف:</strong></li>
+</ul>
+<pre><code class="language-csharp">int[][] jaggedArray = new int[3][];
+jaggedArray[0] = new int[5]; // اولین عنصر یک آرایه با ۵ عنصر
+</code></pre>
+<h3 id="_6"><strong>فصل ۲: حلقه‌ها و پیمایش آرایه‌ها</strong></h3>
+<h4 id="foreach"><strong>۲.۱ حلقه <code>foreach</code></strong></h4>
+<p>برای پیمایش آرایه‌ها و مجموعه‌ها:</p>
+<pre><code class="language-csharp">int[] numbers = {1, 2, 3, 4, 5};
+foreach (int num in numbers)
+{
+    Console.WriteLine(num);
+}
+</code></pre>
+<h3 id="array"><strong>فصل ۳: متدهای کلاس <code>Array</code></strong></h3>
+<h4 id="sort"><strong>۳.۱ مرتب‌سازی (<code>Sort</code>)</strong></h4>
+<p>برای مرتب‌سازی آرایه:</p>
+<pre><code class="language-csharp">Array.Sort(numbers); // اعداد را به ترتیب صعودی مرتب می‌کند
+</code></pre>
+<h4 id="reverse"><strong>۳.۲ معکوس کردن (<code>Reverse</code>)</strong></h4>
+<p>برای معکوس کردن ترتیب عناصر:</p>
+<pre><code class="language-csharp">Array.Reverse(numbers);
+</code></pre>
+<h4 id="binarysearch"><strong>۳.۳ جستجوی دودویی (<code>BinarySearch</code>)</strong></h4>
+<p>برای جستجوی سریع در آرایه‌های مرتب‌شده:</p>
+<pre><code class="language-csharp">int index = Array.BinarySearch(numbers, 3); // اندیس عدد ۳ را برمی‌گرداند
+</code></pre>
+<h3 id="structure"><strong>فصل ۴: ساختمان (Structure)</strong></h3>
+<h4 id="_7"><strong>۴.۱ تعریف ساختمان</strong></h4>
+<p>ساختمان‌ها برای ذخیره داده‌های غیرهم‌نوع استفاده می‌شوند.</p>
+<pre><code class="language-csharp">public struct Student
+{
+    public int Id;
+    public string Name;
+    public double Grade;
+}
+</code></pre>
+<h4 id="_8"><strong>۴.۲ استفاده از ساختمان</strong></h4>
+<pre><code class="language-csharp">Student student1;
+student1.Id = 1;
+student1.Name = &quot;Ali&quot;;
+student1.Grade = 18.5;
+</code></pre>
+<h3 id="dictionary"><strong>فصل ۵: Dictionary</strong></h3>
+<h4 id="_9"><strong>۵.۱ تعریف و استفاده</strong></h4>
+<p>برای ذخیره جفت‌های کلید-مقدار:</p>
+<pre><code class="language-csharp">Dictionary&lt;string, string&gt; phoneBook = new Dictionary&lt;string, string&gt;();
+phoneBook.Add(&quot;Ali&quot;, &quot;09123456789&quot;);
+string aliNumber = phoneBook[&quot;Ali&quot;]; // 09123456789
+</code></pre>
+<h3 id="_10"><strong>فصل ۶: انتقال اطلاعات بین فرم‌ها</strong></h3>
+<h4 id="_11"><strong>۶.۱ استفاده از آرگومان‌ها</strong></h4>
+<p>برای انتقال داده‌ها بین فرم‌ها:</p>
+<pre><code class="language-csharp">// فرم اول
+int number = Convert.ToInt32(textBox1.Text);
+Form2 form2 = new Form2(number);
+form2.Show();
+
+// فرم دوم
+public Form2(int num)
+{
+    InitializeComponent();
+    int doubledNumber = num * 2;
+    textBox1.Text = doubledNumber.ToString();
+}
+</code></pre>
+<hr />
+<h3 id="_12"><strong>تمرین‌ها و مثال‌ها</strong></h3>
+<h4 id="_13"><strong>تمرین ۱:</strong></h4>
+<p>برنامه‌ای بنویسید که نام و شماره تلفن ۱۰ نفر را در آرایه‌ای ذخیره کند و سپس با دریافت نام، شماره تلفن مربوطه را نمایش دهد.</p>
+<h4 id="_14"><strong>تمرین ۲:</strong></h4>
+<p>برنامه‌ای بنویسید که نمرات دانشجویان را در یک آرایه دندانه‌ای ذخیره کرده و معدل هر دانشجو را محاسبه و نمایش دهد.</p>
+<h4 id="_15"><strong>تمرین ۳:</strong></h4>
+<p>برنامه‌ای بنویسید که اطلاعات دانشجو (شماره دانشجویی، نام، نمرات) را در یک ساختمان ذخیره کرده و معدل او را محاسبه کند.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs", "content.code.annotate", "content.tooltips", "navigation.top", "navigation.expand", "navigation.full"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>

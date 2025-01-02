@@ -1,0 +1,1444 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../oop2/">
+      
+      
+        <link rel="next" href="../oop4/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>oop3 - OOP notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazir:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazir";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="OOP notes" class="md-header__button md-logo" aria-label="OOP notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OOP notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              oop3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OOP notes" class="md-nav__button md-logo" aria-label="OOP notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OOP notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    oop3
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    oop3
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      انواع داده
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      انواع داده‌های عددی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      انواع داده‌های غیرعددی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      متغیرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      مقداردهی به متغیرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      حوزه دستیابی به متغیرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      تبدیل نوع
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      عملگرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      اولویت اجرای عملگرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      خواص و رویدادهای کنترل TextBox
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      مثال‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="مثال‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      پاسخ‌های سوالات
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="پاسخ‌های سوالات">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-else-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. دستورات شرطی if و else در C# چگونه کار می‌کنند؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. چگونه می‌توان از دستور if تودرتو برای بررسی چند شرط استفاده کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messagebox-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. کادر پیام (MessageBox) در C# چه کاربردی دارد و چگونه استفاده می‌شود؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. چگونه می‌توان یک برنامه ساده برای محاسبه مالیات و حقوق خالص نوشت؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. کنترل‌های نگهدارنده (Containers) در C# چه کاربردی دارند و انواع آن‌ها چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkbox-radiobutton-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶. تفاوت بین کنترل‌های CheckBox و RadioButton در C# چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۷. دستور شرطی switch در C# چگونه کار می‌کند و چه مزایایی دارد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۸. چگونه می‌توان یک برنامه ساده برای نمایش نام روزهای هفته با استفاده از switch نوشت؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۹. چگونه می‌توان یک فرم جدید به پروژه در Visual Studio اضافه کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checked-checkbox-radiobutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۰. ویژگی Checked در کنترل‌های CheckBox و RadioButton چه کاربردی دارد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۱. چگونه می‌توان از کادر پیام برای دریافت پاسخ از کاربر استفاده کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۲. چگونه می‌توان یک برنامه ساده برای ورود کاربر با نام کاربری و رمز عبور نوشت؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groupbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۳. چگونه می‌توان از کنترل GroupBox برای گروه‌بندی کنترل‌ها استفاده کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۴. چگونه می‌توان از دستور switch برای بررسی مقادیر مختلف یک متغیر استفاده کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkbox-radiobutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۵. چگونه می‌توان یک برنامه ساده برای تغییر رنگ متن و زمینه با استفاده از کنترل‌های CheckBox و RadioButton نوشت؟
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    oop8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      انواع داده
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      انواع داده‌های عددی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      انواع داده‌های غیرعددی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      متغیرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      مقداردهی به متغیرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      حوزه دستیابی به متغیرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      تبدیل نوع
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      عملگرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      اولویت اجرای عملگرها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      خواص و رویدادهای کنترل TextBox
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      مثال‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="مثال‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      پاسخ‌های سوالات
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="پاسخ‌های سوالات">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-else-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱. دستورات شرطی if و else در C# چگونه کار می‌کنند؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۲. چگونه می‌توان از دستور if تودرتو برای بررسی چند شرط استفاده کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messagebox-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۳. کادر پیام (MessageBox) در C# چه کاربردی دارد و چگونه استفاده می‌شود؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۴. چگونه می‌توان یک برنامه ساده برای محاسبه مالیات و حقوق خالص نوشت؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۵. کنترل‌های نگهدارنده (Containers) در C# چه کاربردی دارند و انواع آن‌ها چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkbox-radiobutton-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۶. تفاوت بین کنترل‌های CheckBox و RadioButton در C# چیست؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۷. دستور شرطی switch در C# چگونه کار می‌کند و چه مزایایی دارد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۸. چگونه می‌توان یک برنامه ساده برای نمایش نام روزهای هفته با استفاده از switch نوشت؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۹. چگونه می‌توان یک فرم جدید به پروژه در Visual Studio اضافه کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checked-checkbox-radiobutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۰. ویژگی Checked در کنترل‌های CheckBox و RadioButton چه کاربردی دارد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۱. چگونه می‌توان از کادر پیام برای دریافت پاسخ از کاربر استفاده کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۲. چگونه می‌توان یک برنامه ساده برای ورود کاربر با نام کاربری و رمز عبور نوشت؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groupbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۳. چگونه می‌توان از کنترل GroupBox برای گروه‌بندی کنترل‌ها استفاده کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۴. چگونه می‌توان از دستور switch برای بررسی مقادیر مختلف یک متغیر استفاده کرد؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkbox-radiobutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      ۱۵. چگونه می‌توان یک برنامه ساده برای تغییر رنگ متن و زمینه با استفاده از کنترل‌های CheckBox و RadioButton نوشت؟
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">شروع کدنویسی</h1>
+<h2 id="_2">انواع داده</h2>
+<ul>
+<li><strong>داده</strong>: ورودی‌هایی که به کامپیوتر داده می‌شوند و پس از پردازش به خروجی تبدیل می‌شوند.</li>
+<li><strong>انواع داده</strong>:</li>
+<li><strong>داده‌های اولیه</strong>: از پیش تعریف‌شده در دات نت (عددی و غیرعددی).</li>
+<li><strong>داده‌های تعریف‌شده توسط برنامه‌نویس</strong>: مانند آرایه‌ها و شمارنده‌ها.</li>
+<li><strong>دسته‌بندی داده‌ها</strong>:</li>
+<li><strong>داده‌های مقداری</strong>: ذخیره در پشته.</li>
+<li><strong>داده‌های مرجع</strong>: ذخیره در هیپ.</li>
+</ul>
+<h2 id="_3">انواع داده‌های عددی</h2>
+<table>
+<thead>
+<tr>
+<th>نوع داده</th>
+<th>محدوده</th>
+<th>اندازه (بایت)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>0 تا 255</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>sbyte</code></td>
+<td>-128 تا 127</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>-32768 تا 32767</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td>0 تا 65535</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>-2147483648 تا 2147483647</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>0 تا 4294967295</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>-9223372036854775808 تا 9223372036854775807</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>ulong</code></td>
+<td>0 تا 18446744073709551615</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>±1.5 x 10^-45 تا ±3.4 x 10^38</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>±5.0 x 10^-324 تا ±1.7 x 10^308</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">انواع داده‌های غیرعددی</h2>
+<table>
+<thead>
+<tr>
+<th>نوع داده</th>
+<th>مثال</th>
+<th>اندازه</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>char</code></td>
+<td>'A'</td>
+<td>2 بایت</td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td>"Erfan Zidehsaraei"</td>
+<td>متغیر</td>
+</tr>
+<tr>
+<td><code>DateTime</code></td>
+<td>"5/31/2012 1:43:18 AM"</td>
+<td>8 بایت</td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>true</code> یا <code>false</code></td>
+<td>1 بایت</td>
+</tr>
+<tr>
+<td><code>object</code></td>
+<td>شامل تمام انواع داده‌ها</td>
+<td>نامحدود</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">متغیرها</h2>
+<ul>
+<li><strong>متغیر</strong>: مکانی در حافظه برای نگهداری داده‌ها.</li>
+<li><strong>تعریف متغیر</strong>:
+  <code>csharp
+  نوع_داده نام_متغیر;</code></li>
+<li><strong>قوانین نامگذاری</strong>:</li>
+<li>ترکیبی از حروف، ارقام و زیرخط.</li>
+<li>اولین کاراکتر نباید رقم باشد.</li>
+<li>نباید از کلمات کلیدی استفاده شود.</li>
+<li>طول نام بین 1 تا 511 کاراکتر.</li>
+<li>استفاده از کاراکترهای خاص مانند <code>*</code>, <code>!</code>, <code>$</code>, <code>?</code>, <code>/</code>, <code>\</code>, <code>&lt;</code>, <code>&gt;</code>, و فاصله مجاز نیست.</li>
+</ul>
+<h2 id="_6">مقداردهی به متغیرها</h2>
+<ul>
+<li><strong>روش‌های مقداردهی</strong>:</li>
+<li>هنگام تعریف:
+     <code>csharp
+     char x = 'a';</code></li>
+<li>پس از تعریف:
+     <code>csharp
+     string str;
+     str = "Bahar";</code></li>
+<li>از طریق ورودی کاربر:
+     <code>csharp
+     string str = textbox1.Text;</code></li>
+</ul>
+<h2 id="_7">حوزه دستیابی به متغیرها</h2>
+<ul>
+<li><strong>حوزه (Scope)</strong>: فضای داخل یک بلوک <code>{}</code> که در آن متغیر تعریف شده است.</li>
+<li><strong>قوانین</strong>:</li>
+<li>متغیر فقط در همان بلوک و زیربلوک‌ها قابل دسترسی است.</li>
+<li>می‌توان از دو متغیر با نام یکسان در بلوک‌های مختلف استفاده کرد.</li>
+</ul>
+<h2 id="_8">تبدیل نوع</h2>
+<ul>
+<li><strong>تبدیل ضمنی (Implicit)</strong>: بدون دخالت برنامه‌نویس.
+  <code>csharp
+  Single a = 5;
+  Double b = 14.5;
+  Double s = a + b;</code></li>
+<li><strong>تبدیل صریح (Explicit)</strong>: با استفاده از امکانات زبان.</li>
+<li><strong>استفاده از <code>Convert</code></strong>:
+    <code>csharp
+    string z = "1234";
+    int y = System.Convert.ToInt32(z);</code></li>
+<li><strong>استفاده از <code>ToString</code></strong>:
+    <code>csharp
+    Single a = 664000;
+    string str = a.ToString();</code></li>
+<li><strong>استفاده از <code>Parse</code></strong>:
+    <code>csharp
+    string str = "123.5";
+    double x = double.Parse(str);</code></li>
+<li><strong>تبدیل آگاهانه</strong>:
+    <code>csharp
+    Single a = 14;
+    double b = 12.5;
+    a = (Single)b;</code></li>
+</ul>
+<h2 id="_9">عملگرها</h2>
+<ul>
+<li><strong>انواع عملگرها</strong>:</li>
+<li><strong>محاسباتی</strong>: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>++</code>, <code>--</code>.</li>
+<li><strong>رابطه‌ای</strong>: <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code>.</li>
+<li><strong>منطقی</strong>: <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>.</li>
+<li><strong>ترکیبی</strong>: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>.</li>
+<li><strong>بیتی</strong>: <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code>.</li>
+</ul>
+<h2 id="_10">اولویت اجرای عملگرها</h2>
+<ul>
+<li><strong>ترتیب اولویت</strong>:</li>
+<li>پرانتز <code>()</code>.</li>
+<li>عملگرهای یکانی (<code>++</code>, <code>--</code>, <code>!</code>).</li>
+<li>عملگرهای ضرب و تقسیم (<code>*</code>, <code>/</code>, <code>%</code>).</li>
+<li>عملگرهای جمع و تفریق (<code>+</code>, <code>-</code>).</li>
+<li>عملگرهای رابطه‌ای (<code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>).</li>
+<li>عملگرهای منطقی (<code>&amp;&amp;</code>, <code>||</code>).</li>
+</ul>
+<h2 id="textbox">خواص و رویدادهای کنترل TextBox</h2>
+<ul>
+<li><strong>خواص</strong>:</li>
+<li><code>Text</code>: متن داخل TextBox.</li>
+<li><code>MaxLength</code>: حداکثر طول متن.</li>
+<li><code>Multiline</code>: امکان نوشتن چند خطی.</li>
+<li><code>ReadOnly</code>: غیرقابل ویرایش بودن متن.</li>
+<li><strong>رویدادها</strong>:</li>
+<li><code>TextChanged</code>: هنگام تغییر متن.</li>
+<li><code>Enter</code>: هنگام انتخاب کنترل.</li>
+<li><code>Leave</code>: هنگام ترک کنترل.</li>
+</ul>
+<h2 id="_11">مثال‌ها</h2>
+<ol>
+<li><strong>نمایش متن در دو TextBox</strong>:
+   <code>csharp
+   private void textBox1_TextChanged(object sender, EventArgs e)
+   {
+       textBox2.Text = textBox1.Text.ToUpper();
+   }</code></li>
+<li><strong>محاسبه مساحت مستطیل</strong>:
+   <code>csharp
+   private void button1_Click(object sender, EventArgs e)
+   {
+       float a = Convert.ToSingle(textBox1.Text);
+       float b = Convert.ToSingle(textBox3.Text);
+       textBox2.Text = Convert.ToString(a * b);
+   }</code></li>
+</ol>
+<h3 id="_12">پاسخ‌های سوالات</h3>
+<hr />
+<h4 id="if-else-c">۱. <strong>دستورات شرطی <code>if</code> و <code>else</code> در C# چگونه کار می‌کنند؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  دستور <code>if</code> برای اجرای یک بلوک کد در صورتی که شرط داده‌شده درست (<code>true</code>) باشد استفاده می‌شود. اگر شرط نادرست (<code>false</code>) باشد، بلوک کد داخل <code>if</code> اجرا نمی‌شود و در صورت وجود <code>else</code>، بلوک کد داخل <code>else</code> اجرا می‌شود.<br />
+  مثال:
+  <code>csharp
+  if (age &gt; 18) {
+      Console.WriteLine("بزرگسال");
+  } else {
+      Console.WriteLine("نوجوان");
+  }</code></li>
+</ul>
+<hr />
+<h4 id="if">۲. <strong>چگونه می‌توان از دستور <code>if</code> تودرتو برای بررسی چند شرط استفاده کرد؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  با استفاده از <code>else if</code> می‌توان چند شرط را به صورت تودرتو بررسی کرد. اگر شرط اول درست نباشد، شرط دوم بررسی می‌شود و به همین ترتیب ادامه می‌یابد.<br />
+  مثال:
+  <code>csharp
+  if (score &gt;= 90) {
+      Console.WriteLine("نمره A");
+  } else if (score &gt;= 80) {
+      Console.WriteLine("نمره B");
+  } else if (score &gt;= 70) {
+      Console.WriteLine("نمره C");
+  } else {
+      Console.WriteLine("نمره D");
+  }</code></li>
+</ul>
+<hr />
+<h4 id="messagebox-c">۳. <strong>کادر پیام (<code>MessageBox</code>) در C# چه کاربردی دارد و چگونه استفاده می‌شود؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+<code>MessageBox</code> برای نمایش پیام‌ها یا دریافت پاسخ از کاربر استفاده می‌شود. با استفاده از متد <code>Show</code> می‌توان پیام، عنوان، دکمه‌ها و آیکون را تنظیم کرد.<br />
+  مثال:
+  <code>csharp
+  MessageBox.Show("آیا مطمئن هستید؟", "تأیید", MessageBoxButtons.YesNo, MessageBoxIcon.Question);</code></li>
+</ul>
+<hr />
+<h4 id="_13">۴. <strong>چگونه می‌توان یک برنامه ساده برای محاسبه مالیات و حقوق خالص نوشت؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  با استفاده از دستور <code>if</code> می‌توان مالیات را بر اساس حقوق محاسبه کرد.<br />
+  مثال:
+  <code>csharp
+  double salary = 12000000;
+  double tax;
+  if (salary &lt; 10000000) {
+      tax = salary * 0.10;
+  } else {
+      tax = salary * 0.05;
+  }
+  double netSalary = salary - tax;
+  Console.WriteLine("حقوق خالص: " + netSalary);</code></li>
+</ul>
+<hr />
+<h4 id="containers-c">۵. <strong>کنترل‌های نگهدارنده (<code>Containers</code>) در C# چه کاربردی دارند و انواع آن‌ها چیست؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  کنترل‌های نگهدارنده برای گروه‌بندی و سازماندهی کنترل‌ها استفاده می‌شوند. انواع آن‌ها شامل <code>GroupBox</code>, <code>Panel</code>, <code>TabControl</code>, و <code>TableLayoutPanel</code> هستند.<br />
+  مثال:</li>
+<li><code>GroupBox</code>: برای گروه‌بندی کنترل‌ها با عنوان.</li>
+<li><code>Panel</code>: برای گروه‌بندی کنترل‌ها بدون عنوان.</li>
+</ul>
+<hr />
+<h4 id="checkbox-radiobutton-c">۶. <strong>تفاوت بین کنترل‌های <code>CheckBox</code> و <code>RadioButton</code> در C# چیست؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:</li>
+<li><code>CheckBox</code>: برای انتخاب چند گزینه از چند گزینه استفاده می‌شود.</li>
+<li><code>RadioButton</code>: برای انتخاب یک گزینه از چند گزینه استفاده می‌شود.<br />
+    مثال:</li>
+<li><code>CheckBox</code>: انتخاب علاقه‌مندی‌ها (مثلاً ورزش، موسیقی).</li>
+<li><code>RadioButton</code>: انتخاب جنسیت (مثلاً مرد، زن).</li>
+</ul>
+<hr />
+<h4 id="switch-c">۷. <strong>دستور شرطی <code>switch</code> در C# چگونه کار می‌کند و چه مزایایی دارد؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+<code>switch</code> برای بررسی مقادیر مختلف یک متغیر استفاده می‌شود. اگر مقدار متغیر با یکی از <code>case</code>ها مطابقت داشته باشد، بلوک کد مربوطه اجرا می‌شود.<br />
+  مثال:
+  <code>csharp
+  int day = 3;
+  switch (day) {
+      case 1:
+          Console.WriteLine("شنبه");
+          break;
+      case 2:
+          Console.WriteLine("یکشنبه");
+          break;
+      default:
+          Console.WriteLine("روز نامعتبر");
+          break;
+  }</code></li>
+</ul>
+<hr />
+<h4 id="switch">۸. <strong>چگونه می‌توان یک برنامه ساده برای نمایش نام روزهای هفته با استفاده از <code>switch</code> نوشت؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  با استفاده از <code>switch</code> می‌توان عددی بین 1 تا 7 را به نام روزهای هفته تبدیل کرد.<br />
+  مثال:
+  <code>csharp
+  int day = Convert.ToInt32(textBox1.Text);
+  switch (day) {
+      case 1:
+          MessageBox.Show("شنبه");
+          break;
+      case 2:
+          MessageBox.Show("یکشنبه");
+          break;
+      // سایر روزها
+      default:
+          MessageBox.Show("عدد خارج از محدوده");
+          break;
+  }</code></li>
+</ul>
+<hr />
+<h4 id="visual-studio">۹. <strong>چگونه می‌توان یک فرم جدید به پروژه در Visual Studio اضافه کرد؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:</li>
+<li>در Solution Explorer، راست‌کلیک روی پروژه.</li>
+<li>انتخاب <code>Add</code> &gt; <code>Windows Form</code>.</li>
+<li>نام‌گذاری فرم جدید و کلیک <code>Add</code>.</li>
+</ul>
+<hr />
+<h4 id="checked-checkbox-radiobutton">۱۰. <strong>ویژگی <code>Checked</code> در کنترل‌های <code>CheckBox</code> و <code>RadioButton</code> چه کاربردی دارد؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  ویژگی <code>Checked</code> نشان‌دهنده وضعیت انتخاب کنترل است. اگر <code>true</code> باشد، کنترل انتخاب شده است و اگر <code>false</code> باشد، انتخاب نشده است.<br />
+  مثال:
+  <code>csharp
+  if (checkBox1.Checked) {
+      Console.WriteLine("CheckBox انتخاب شده است");
+  }</code></li>
+</ul>
+<hr />
+<h4 id="_14">۱۱. <strong>چگونه می‌توان از کادر پیام برای دریافت پاسخ از کاربر استفاده کرد؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  با استفاده از <code>MessageBox.Show</code> و تنظیم دکمه‌ها می‌توان پاسخ کاربر را دریافت کرد.<br />
+  مثال:
+  <code>csharp
+  DialogResult result = MessageBox.Show("آیا مطمئن هستید؟", "تأیید", MessageBoxButtons.YesNo);
+  if (result == DialogResult.Yes) {
+      Console.WriteLine("کاربر Yes را انتخاب کرد");
+  }</code></li>
+</ul>
+<hr />
+<h4 id="_15">۱۲. <strong>چگونه می‌توان یک برنامه ساده برای ورود کاربر با نام کاربری و رمز عبور نوشت؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  با استفاده از <code>if</code> می‌توان نام کاربری و رمز عبور را بررسی کرد.<br />
+  مثال:
+  <code>csharp
+  string username = "admin";
+  string password = "1234";
+  if (username == textBox1.Text &amp;&amp; password == textBox2.Text) {
+      MessageBox.Show("ورود موفق");
+  } else {
+      MessageBox.Show("نام کاربری یا رمز عبور اشتباه است");
+  }</code></li>
+</ul>
+<hr />
+<h4 id="groupbox">۱۳. <strong>چگونه می‌توان از کنترل <code>GroupBox</code> برای گروه‌بندی کنترل‌ها استفاده کرد؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  با قرار دادن کنترل‌ها داخل <code>GroupBox</code> می‌توان آن‌ها را گروه‌بندی کرد.<br />
+  مثال:
+  <code>csharp
+  groupBox1.Controls.Add(radioButton1);
+  groupBox1.Controls.Add(radioButton2);</code></li>
+</ul>
+<hr />
+<h4 id="switch_1">۱۴. <strong>چگونه می‌توان از دستور <code>switch</code> برای بررسی مقادیر مختلف یک متغیر استفاده کرد؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  با استفاده از <code>switch</code> می‌توان مقادیر مختلف یک متغیر را بررسی کرد.<br />
+  مثال:
+  <code>csharp
+  int number = 2;
+  switch (number) {
+      case 1:
+          Console.WriteLine("یک");
+          break;
+      case 2:
+          Console.WriteLine("دو");
+          break;
+      default:
+          Console.WriteLine("عدد نامعتبر");
+          break;
+  }</code></li>
+</ul>
+<hr />
+<h4 id="checkbox-radiobutton">۱۵. <strong>چگونه می‌توان یک برنامه ساده برای تغییر رنگ متن و زمینه با استفاده از کنترل‌های <code>CheckBox</code> و <code>RadioButton</code> نوشت؟</strong></h4>
+<ul>
+<li><strong>پاسخ</strong>:<br />
+  با استفاده از رویداد <code>CheckedChanged</code> می‌توان رنگ متن و زمینه را تغییر داد.<br />
+  مثال:
+  <code>csharp
+  private void checkBox1_CheckedChanged(object sender, EventArgs e) {
+      if (checkBox1.Checked) {
+          textBox1.BackColor = Color.Red;
+      } else {
+          textBox1.BackColor = Color.White;
+      }
+  }</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs", "content.code.annotate", "content.tooltips", "navigation.top", "navigation.expand", "navigation.full"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>
